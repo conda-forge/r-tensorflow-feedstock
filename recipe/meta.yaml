@@ -27,11 +27,18 @@ requirements:
     - r-base
     - r-reticulate >=0.7
     - r-yaml
-
+    - r-config
+    - r-processx
+    - r-tfruns
+    - r-rstudioapi
   run:
     - r-base
     - r-reticulate >=0.7
     - r-yaml
+    - r-config
+    - r-processx
+    - r-tfruns
+    - r-rstudioapi
 
 test:
   commands:
