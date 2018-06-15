@@ -1,4 +1,4 @@
-{% set version = '0.7' %}
+{% set version = "1.8" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/tensorflow_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/tensorflow/tensorflow_{{ version }}.tar.gz
-  sha256: 1b15123f689a452f55db3ac0908e4dd64e8a628dc6e57bd927d3ea7472123f42
+  sha256: 538b9c95727144fc7d7b9fde9c590b841210e1ee8a2375f62d772e7aaa88b4c7
 
 build:
   number: 0
@@ -27,11 +27,18 @@ requirements:
     - r-base
     - r-reticulate >=0.7
     - r-yaml
-
+    - r-config
+    - r-processx
+    - r-tfruns
+    - r-rstudioapi
   run:
     - r-base
     - r-reticulate >=0.7
     - r-yaml
+    - r-config
+    - r-processx
+    - r-tfruns
+    - r-rstudioapi
 
 test:
   commands:
