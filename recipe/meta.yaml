@@ -1,5 +1,4 @@
-{% set version = "1.8" %}
-
+{% set version = '1.9' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,39 +9,43 @@ package:
 source:
   fn: tensorflow_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/tensorflow_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/tensorflow/tensorflow_{{ version }}.tar.gz
-  sha256: 538b9c95727144fc7d7b9fde9c590b841210e1ee8a2375f62d772e7aaa88b4c7
+    - {{ cran_mirror }}/src/contrib/tensorflow_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/tensorflow/tensorflow_{{ version }}.tar.gz
+  sha256: c341a7c8c72ddefa2803f20757d516449cfe6999e632c8dad2ebe0297f37643c
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-    - r-reticulate >=0.7
-    - r-yaml
     - r-config
+    - r-jsonlite >=1.2
     - r-processx
-    - r-tfruns
-    - r-rstudioapi
+    - r-reticulate >=1.10
+    - r-rstudioapi >=0.7
+    - r-tfruns >=1.0
+    - r-yaml
   run:
     - r-base
-    - r-reticulate >=0.7
-    - r-yaml
     - r-config
+    - r-jsonlite >=1.2
     - r-processx
-    - r-tfruns
-    - r-rstudioapi
+    - r-reticulate >=1.10
+    - r-rstudioapi >=0.7
+    - r-tfruns >=1.0
+    - r-yaml
 
 test:
   commands:
-    - $R -e "library('tensorflow')"  # [not win]
+    - $R -e "library('tensorflow')"           # [not win]
     - "\"%R%\" -e \"library('tensorflow')\""  # [win]
 
 about:
@@ -64,3 +67,7 @@ extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
