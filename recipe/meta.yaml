@@ -13,8 +13,8 @@ source:
   sha256: 247b6c1341fdf18fac1dcb54dee50b663aa540a704534d0fb18aa34c97a1e0b3
 
 build:
-  merge_build_host: True  # [win]
-  number: 0
+  merge_build_host: true  # [win]
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -22,7 +22,7 @@ build:
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-config
@@ -49,18 +49,12 @@ test:
 
 about:
   home: https://github.com/rstudio/tensorflow
-  license: Apache 2.0
-  summary: Interface to 'TensorFlow' <https://www.tensorflow.org/>,  an open source software
-    library for numerical computation using data flow graphs. Nodes in the graph represent
-    mathematical operations,  while the graph edges represent the multidimensional data
-    arrays  (tensors) communicated between them. The flexible architecture allows you
-    to deploy computation to one or more 'CPUs' or 'GPUs' in a desktop,  server, or
-    mobile device with a single 'API'. 'TensorFlow' was originally developed by researchers
-    and engineers working on the Google Brain Team  within Google's Machine Intelligence
-    research organization for the  purposes of conducting machine learning and deep
-    neural networks research, but the system is general enough to be applicable in a
-    wide variety of other domains as well.
+  license: Apache-2.0
+  summary: Interface to 'TensorFlow' <https://www.tensorflow.org/>,  an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations,  while the graph edges represent the multidimensional data arrays  (tensors) communicated between them. The flexible
+    architecture allows you to deploy computation to one or more 'CPUs' or 'GPUs' in a desktop,  server, or mobile device with a single 'API'. 'TensorFlow' was originally developed by researchers and engineers working on the Google Brain Team  within Google's Machine Intelligence research organization for the  purposes of
+    conducting machine learning and deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
   license_family: APACHE
+  license_file: LICENSE-2.0.txt
 
 extra:
   recipe-maintainers:
