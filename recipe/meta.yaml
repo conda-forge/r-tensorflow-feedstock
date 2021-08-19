@@ -23,22 +23,23 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-config
-    - r-jsonlite >=1.2
     - r-processx
     - r-reticulate >=1.10
     - r-rstudioapi >=0.7
+    - r-tfautograph >=0.3
     - r-tfruns >=1.0
     - r-yaml
   run:
     - r-base
     - r-config
-    - r-jsonlite >=1.2
     - r-processx
     - r-reticulate >=1.10
     - r-rstudioapi >=0.7
+    - r-tfautograph >=0.3
     - r-tfruns >=1.0
     - r-yaml
 
