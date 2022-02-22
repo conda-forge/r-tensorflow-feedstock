@@ -1,4 +1,4 @@
-{% set version = "2.7.0" %}
+{% set version = "2.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tensorflow_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tensorflow/tensorflow_{{ version }}.tar.gz
-  sha256: cf1a307ebb3ac903242325d4411a80cbedcfb11adae3b837310551189644f575
+  sha256: 23fd7747b9200d23db810ab6c408ac280618ac4ad2993e818e4abedae9965ea5
 
 build:
   merge_build_host: true  # [win]
