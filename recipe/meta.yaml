@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -28,18 +28,18 @@ requirements:
     - r-base
     - r-config
     - r-processx
-    - r-reticulate >=1.10
+    - r-reticulate >=1.24
     - r-rstudioapi >=0.7
-    - r-tfautograph >=0.3
+    - r-tfautograph >=0.3.1
     - r-tfruns >=1.0
     - r-yaml
   run:
     - r-base
     - r-config
     - r-processx
-    - r-reticulate >=1.10
+    - r-reticulate >=1.24
     - r-rstudioapi >=0.7
-    - r-tfautograph >=0.3
+    - r-tfautograph >=0.3.1
     - r-tfruns >=1.0
     - r-yaml
 
