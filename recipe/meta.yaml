@@ -1,4 +1,4 @@
-{% set version = "2.9.0" %}
+{% set version = "2.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tensorflow_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tensorflow/tensorflow_{{ version }}.tar.gz
-  sha256: d27e017fe48a8179a192099bec31e41abe24e8bbe9fe3b95c4ce3cd27bb38689
+  sha256: 2f392561b67da630f7a2e863429c336a317ab567a764cc21796cbeb206eb7fd2
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
