@@ -1,13 +1,17 @@
 About r-tensorflow
 ==================
 
-Home: https://github.com/rstudio/tensorflow
+Home: https://tensorflow.rstudio.com
 
 Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tensorflow-feedstock/blob/main/LICENSE.txt)
 
 Summary: Interface to 'TensorFlow' <https://www.tensorflow.org/>,  an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations,  while the graph edges represent the multidimensional data arrays  (tensors) communicated between them. The flexible architecture allows you to deploy computation to one or more 'CPUs' or 'GPUs' in a desktop,  server, or mobile device with a single 'API'. 'TensorFlow' was originally developed by researchers and engineers working on the Google Brain Team  within Google's Machine Intelligence research organization for the  purposes of conducting machine learning and deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
+
+Development: https://github.com/rstudio/tensorflow
+
+Documentation: https://tensorflow.rstudio.com/reference/tensorflow/
 
 Current build status
 ====================
